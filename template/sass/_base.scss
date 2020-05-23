@@ -1,0 +1,19 @@
+// Reset default styles
+
+body{
+    min-height: 100vh;
+    display: flex; // To make footer sticks to the bottom
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+}
+::selection{
+    background-color: $primary;
+    color: $white;
+}
+ul li{
+    list-style-position: inside;
+}
+ul ul {
+    padding-left: 0.8rem;
+}

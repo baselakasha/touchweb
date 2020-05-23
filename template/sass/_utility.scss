@@ -1,0 +1,20 @@
+.h-100vh{
+    height: 100vh;
+}
+.h-min-75vh{
+    min-height: 75vh;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+.focusable.visually-hidden:focus {
+    position: relative;
+    width: auto;
+    height: auto;
+    overflow: auto;
+}

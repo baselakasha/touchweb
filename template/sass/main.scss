@@ -1,0 +1,13 @@
+// Bootstrap
+// Note : bootstrap defualt varaibles can be ovrided before the import only
+@import "bootstrap-include";
+
+// Custom sass
+@import "variables";
+@import "base";
+@import "utility";
+@import "mixins";
+@import "layout";
+@import "animations";
+@import "pages/home";
+

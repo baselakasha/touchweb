@@ -1,0 +1,54 @@
+doctype html
+html(lang=`${language_code}`)
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		if include_seo_meta
+			// SEO Page info
+			meta(name="description" content=`${description}`)
+			meta(property="og:locale" content=`${language_code}`)
+			meta(property="og:type" content="website")
+			meta(property="og:title" content=`${title}`)
+			meta(property='og:description', content=`${description}`)
+			meta(property='og:url', content=`${url}`)
+			meta(property='og:site_name', content=`${sitename}`)
+			meta(name='twitter:card', content='summary_large_image')
+			meta(name='twitter:description', content=`${description}`)
+			meta(name='twitter:title', content=`${title}`)
+		if is_address_bar_color
+			// Address bar color
+			meta(name='theme-color', content=`${address_bar_color}`)
+			meta(name='msapplication-navbutton-color', content=`${address_bar_color}`)
+			meta(name='apple-mobile-web-app-status-bar-style', content=`${address_bar_color}`)
+		if extra_libraries.includes("FontAwesome")
+			// Font Awesome
+			link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css')
+		// CSS (bootstrap css is compiled into style.css)
+		link(rel='stylesheet', href='style/style.css')
+
+	body
+		| 
+		|
+		a.focusable.visually-hidden(href='#main-content') Skip to main content
+		|
+		| 
+		header.header
+
+		main#main-content.main
+
+		footer.footer
+	// jQuery
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+	// Bootstrap JS
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js')
+
+	if extra_libraries.includes("FontAwesome")
+		// Font Awesome
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css')
+
+	if extra_libraries.includes("NiceScroll")
+		// Nice Scroll
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js')
+	// Custom JS
+	script(src='script/script.js')
